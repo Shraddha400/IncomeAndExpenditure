@@ -38,6 +38,10 @@ class ExpenditureFragment : Fragment() {
             layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
             adapter = ExpenditureAdapter(expenditureList!!)
         }
+        recyclerView!!.itemAnimator = DefaultItemAnimator()
+
+        // adding inbuilt divider line
+        recyclerView!!.addItemDecoration(DividerItemDecoration(activity, LinearLayoutManager.VERTICAL))
         return view
     }
 
